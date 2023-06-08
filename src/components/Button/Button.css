@@ -1,0 +1,33 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing:border-box;
+}
+
+.button_style{
+    padding:12px 50px;
+border-radius: 25px;
+margin: 20px;
+}
+
+.Button_Container{
+    display:block;
+    justify-content: center;
+}
+
+.frontend{
+    background-color:white;
+    color:black;
+}
+.webdesign{
+    background-color:rgb(0, 255, 208);
+    color:black;
+}
+.backend{
+    background-color:rgb(255, 0, 208);
+    color:black;
+}
+.fullstack{
+    background-color:rgb(27, 11, 11);
+    color:white;
+}
