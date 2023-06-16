@@ -1,0 +1,12 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing:border-box;
+}
+
+.Overall_Container{
+    display:flex;
+    flex-direction:column;
+    padding:20px;
+    justify-content:center;
+}

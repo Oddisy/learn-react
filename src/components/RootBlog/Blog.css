@@ -1,0 +1,32 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing:border-box;
+}
+
+
+.TextInput{
+padding:12px 48px;
+    border-radius: 20px;
+
+}
+.Section_Three{
+    width:100%;
+    padding:20px;
+}
+.Label{
+    display:block;
+}
+
+/* new styling */
+input{
+    padding:12px 48px;
+    border-radius: 20px;
+}
+button{
+    padding:6px 24px;
+    color:white;
+    border-radius:10px;
+    margin-left:50px;
+    background-color:green;
+}

@@ -1,0 +1,18 @@
+.Blog_Section{
+width:100%;
+/* background-color: aliceblue; */
+}
+
+.Blog_Section{
+height:300px;
+width : 100%;
+background-color:blue;
+height:500px;
+}
+button{
+    padding:6px 24px;
+    color:white;
+    border-radius:10px;
+    margin-left:50px;
+    background-color:green;
+}

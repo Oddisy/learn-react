@@ -1,12 +1,12 @@
 import React from 'react'
-import './AppCard.css'
-import Card from "./components/card/Card"
+import './Cards.css'
+import CardRoot from "../components/RootCard/Card"
 
-export default function App() {
+const Cards = () => {
     return (
-        <div>
-            <div className="card_container row_one">
-                <Card
+        <div  className="card_container" >
+            <div>
+                <CardRoot
                     track="Frontend"
                     role="Building ui for client"
                     tools="html, css, JavaScript, react"
@@ -14,7 +14,7 @@ export default function App() {
                     TrackColor="FrontendColor"
                     toolStyle="tools_color"
           />
-                <Card
+                <CardRoot
                     track="Web Design"
                     tools="Adope, figma, Behance"
                       role="Building ui for Developers"
@@ -22,14 +22,14 @@ export default function App() {
                 />
             </div>
             
-            <div className="card_container row_two">
+            <div>
            
-                <Card
+                <CardRoot
                     track="Backend"
                     tools="php, node js, python"
                       role="Building Database "
                 />
-                <Card
+                <CardRoot
                     track="FullStack"
                     tools="html, css, JavaScript, react, node Js"
                       role="Can work as a frontend or Backend Developer"
@@ -39,4 +39,5 @@ export default function App() {
     )
 }
 
+export default Cards;
  

@@ -1,31 +1,31 @@
 import React from "react"
-import "./AppButton.css"
-import Button from "./components/Button/Button"
-import App from "./AppCard"
+import ButtonRoot from "../components/RootBotton/Button"
+import "./Buttons.css";
 
-const AppButton = () => {
-    const frontendBackGround = document.querySelector('.cardy')
+const Buttons = () => {
     return (
         <div className="Button_App">
-            <Button
+            <ButtonRoot
                 otherClassName="frontend"
                 text="frontend"
-                onClick={() => frontendBackGround.style.backgroundColor = "white"  }
+          onClick={() => console.log = "end"}
+       
+
         />
-          <Button
+          <ButtonRoot
                 otherClassName="backend"
                 text="backend"
         />
-          <Button
+          <ButtonRoot
                 otherClassName="webdesign"
                 text="webdesign"
             />
 
-              <Button
+              <ButtonRoot
                 otherClassName="fullstack"
                 text="fullstack"
             />
             </div>
     )
 }
-export default AppButton
+export default Buttons;

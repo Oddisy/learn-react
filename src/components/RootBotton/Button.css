@@ -4,9 +4,9 @@
     box-sizing:border-box;
 }
 
-.button_style{
-    padding:12px 50px;
-border-radius: 25px;
+.Button_Style{
+padding:24px 70px;
+border-radius: 35px;
 margin: 20px;
 }
 
@@ -31,3 +31,8 @@ margin: 20px;
     background-color:rgb(27, 11, 11);
     color:white;
 }
+
+.track{
+    color:white;
+}
+
