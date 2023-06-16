@@ -2,53 +2,60 @@ import React from "react"
 import "./Blog.css"
 import { useFormik } from "formik"
 
-const Blog = () => {
-  const formik = useFormik({
-          
-      initialValues: {
+const initialValues = {
         name: "",
         email: "",
         password: ""
-    },
-          onSubmit: values => {
+    }
+      const onSubmit = values => {
             console.log('form value', values)
-          }
+}
+          const validate = values => {
+    let errors = {};
+    if  (!values.name) {
+      errors.name = "Required"
+            }
+   
+            if  (!values.email) {
+      errors.email = "Required"
+    }
+    else if (!/^[A-Z0-9._%+_]+@[A-Z,0-9,-]+\.[A-Z]{2,4}$/i.test(values.email)) {
+      errors.email = "invalid email address"
+    }
+    if  (!values.password){
+      errors.password = "Required"
+    }
+    return errors;
+  }
            
-  // validate: values => {
-  //   let errors = {};
-  //   if (!values.name) {
-  //     errors.name = "Required"
-  //   }
-  //   if (!values.email) {
-  //     errors.email = "Required"
-  //   }
-  //   else if (!/^[A-Z0-9._%+_]+@[A-Z,0-9,-]+\.[A-Z]{2,4}$/i.test(values.email)) {
-  //     errors.email = "invalid email address"
-  //   }
-  //   if (!values.password) {
-  //     errors.password = "Required"
-  //   }
-  //   return errors;
-  // }
+const Blog = () => {
+  const formik = useFormik({
+    initialValues,
+      onSubmit, 
+  validate 
 
             
         })
 
-    
+    // console.log("from data", formik.values)
     return (
       <section >
            
-            <form onSubmit={formik.handleSubmit}>
+        <form onSubmit={formik.handleSubmit}>
+          <div className="form_control">
             <input
                     id="fullName"
                     type="text"
                     required="required"
                     placeholder="Full Name"
-                    name="fullName"
+                    name="name"
                     onChange={formik.handleChange}
-                    value={formik.values.fullName}
+              value={formik.values.name}
+              onBlur ={formik.handleBlur}
             />
-           
+          {formik.touched.name && formik.errors.name ?  <div className="error">{formik.errors.name}</div> : null }
+          </div>
+      <div className="form_control">
         <input
           id="email"
           type="email"
@@ -56,8 +63,12 @@ const Blog = () => {
           placeholder="email"
         name="email"
          onChange={formik.handleChange}
-        value={formik.values.email}
-        />
+              value={formik.values.email}
+               onBlur ={formik.handleBlur}
+            />
+            {formik.touched.email && formik.errors.email ? <div className="error"> {formik.errors.email} </div>: null}
+          </div>
+          <div className="form_control">
         <input
            id="Password"
           type="password"
@@ -65,8 +76,12 @@ const Blog = () => {
           placeholder="Password"
          name="password"
         onChange={formik.handleChange}
-         value={formik.values.password}
+              value={formik.values.password}
+               onBlur={formik.handleBlur}
+              
             />
+            {formik.touched.password && formik.errors.password ? <div className="error">{formik.errors.password}</div>: null}
+            </div>
         <button type="submit" >Submit</button>
             </form>
              </section>

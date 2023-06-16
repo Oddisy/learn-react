@@ -30,3 +30,13 @@ button{
     margin-left:50px;
     background-color:green;
 }
+
+.form_control{
+    margin-bottom:20px;
+}
+.error{
+    color:red;
+}
+@media screen  {
+    
+}
